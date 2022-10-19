@@ -2,19 +2,16 @@
 # Space Telegram Bot
 
 ## Description
-***
 
 The bot parses the [Moscow planetarium](https://www.planetarium-moscow.ru/) 
 website every day and sends news. If there is no fresh news, then the bot sends a message `No news today`.
 If something happens, the bot will also send an error message.
 
 ## Requirements
-***
 **Space telegram bot** requires [Docker](https://www.docker.com/) and [make](https://www.gnu.org/software/make/) to run.
 You also need a telegram bot.
 
 ## Tech
-***
 **Space telegram bot** uses:
 * [Python 3.10](https://www.python.org/)
 * [Python-Telegram-Bot](https://pypi.org/project/python-telegram-bot/)
@@ -27,7 +24,6 @@ You also need a telegram bot.
 
 
 ## Quick start
-***
 1. Clone this repo.
 > git clone [git@github.com:Darya-Kuzmich/space-telegram-bot.git](https://github.com/Darya-Kuzmich/space-telegram-bot)
 2. Place an `.env` file in the root of the project. An example can be found in the [env.example](env.example) file.
@@ -43,7 +39,6 @@ After executing this command, two containers should be built and launched:
 5. At the time specified in the schedule, astro news will come to your telegram bot. Enjoy! 😊
 
 ## Features
-***
 To see all available commands, run 
 > make help
 
@@ -51,9 +46,7 @@ If you want, you can add other commands to the [Makefile](Makefile).
 
 
 ## License
-***
 MIT
 
 ## Author
-***
 Darya Let'sRock Kuzmich
