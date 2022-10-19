@@ -13,13 +13,6 @@ from config import settings, NewsCard
 from storages import RedisStorage
 
 redis_storage = RedisStorage(**settings.redis.dict())
-"""
-redis_storage = RedisStorage(
-    host='localhost',
-    port=6379,
-    db=0,
-)
-"""
 
 
 def get_html() -> requests.Response.text:
@@ -107,9 +100,7 @@ def main():
 
 if __name__ == '__main__':
 
-    # schedule.every().day.at('9:30').do(main)
-    # schedule.every(30).seconds.do(main)
-    schedule.every().hour.do(main)
+    schedule.every().day.at('9:30').do(main)
 
     while True:
         schedule.run_pending()
