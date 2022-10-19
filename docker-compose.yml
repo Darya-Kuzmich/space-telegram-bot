@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+
+  space-redis:
+    image: redis:7.0.0-alpine
+    container_name: redis_space_bot
+    restart: always
+    expose:
+      - '6379'
+    command: redis-server
+    volumes:
+      - redis_space_data:/data
+
+  space-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python bot.py
+    container_name: space_bot
+    restart: always
+    depends_on:
+      - space-redis
+    env_file:
+      - .env
+
+volumes:
+  redis_space_data:
